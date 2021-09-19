@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-  background-color: rgba(30, 33, 39, 0.9);
+  background-color: rgba(18, 21, 29, 0.98);
   color: #abb2bf;
   transition-property: background-color;
   transition-duration: .5s;
@@ -30,9 +30,9 @@ window#waybar.hidden {
 #battery,
 #network,
 #tray {
-  background-color: #2e3137;
+  background-color: #1e222a;
   padding: 0 10px;
-  margin: 0 4px 0 4px;
+  margin: 2px 4px 2px 4px;
   border: 3px solid rgba(0, 0, 0, 0);
   border-radius: 90px;
   background-clip: padding-box;
@@ -40,6 +40,7 @@ window#waybar.hidden {
 
 #workspaces button {
   padding: 0 5px;
+  min-width: 20px;
   color: #61afef;
 }
 
@@ -69,7 +70,7 @@ window#waybar.hidden {
 
 #temperature.critical {
   background-color: #e06c75;
-  color: #2e3137;
+  color: #1e222a;
 }
 #custom-phone-battery {
   color: #98c379;
@@ -77,7 +78,7 @@ window#waybar.hidden {
 
 #custom-media {
   background-color: #98c379;
-  color: #2e3137;
+  color: #1e222a;
 }
 
 #clock {
@@ -90,7 +91,7 @@ window#waybar.hidden {
 
 #idle_inhibitor.activated {
   background-color: #abb2bf;
-  color: #2e3137;
+  color: #1e222a;
 }
 
 #language {
@@ -103,7 +104,7 @@ window#waybar.hidden {
 
 #pulseaudio.muted {
   background-color: #e06c75;
-  color: #2e3137;
+  color: #1e222a;
 }
 
 #backlight {
@@ -116,7 +117,7 @@ window#waybar.hidden {
 
 #battery.charging, #battery.plugged {
   background-color: #98c379;
-  color: #2e3137;
+  color: #1e222a;
 }
 
 @keyframes blink {
@@ -128,7 +129,7 @@ window#waybar.hidden {
 
 #battery.critical:not(.charging) {
     background-color: #e06c75;
-    color: #2e3137;
+    color: #1e222a;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -137,11 +138,10 @@ window#waybar.hidden {
 }
 
 #network {
-    background-color: #2e3137;
     color: #c678dd
 }
 
 #network.disconnected {
     background-color: #e06c75;
-    color: #2e3137;
+    color: #1e222a;
 }

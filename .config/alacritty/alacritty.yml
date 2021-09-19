@@ -1,7 +1,7 @@
 colors:
   # Default colors
   primary:
-    background: '0x1e222a'
+    background: '0x12151d'
     foreground: '0xabb2bf'
 
     # Bright and dim foreground colors
@@ -40,7 +40,7 @@ colors:
     cyan:    '0x56b6c2'
     white:   '0x828791'
 
-background_opacity: 0.95
+background_opacity: 1
 
 # Fonts
 font:

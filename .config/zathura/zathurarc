@@ -1,3 +1,6 @@
+# Zathura configuration file
+# See man `man zathurarc'
+
 # Open document in fit-width mode by default
 set adjust-open "best-fit"
 
@@ -14,45 +17,45 @@ set scroll-step 100
 set zoom-min 10
 set guioptions ""
 
-# font settings
-set font "iosevka 15"
+# zathurarc-dark
 
-#some useful settings
+set font "iosevka 15"
+set default-bg "#12151d" #00
+set default-fg "#ABB2BF" #01
+
+set statusbar-fg "#ABB2BF" #04
+set statusbar-bg "#12151d" #01
+
+set inputbar-bg "#1e222a" #00
+set inputbar-fg "#ABB2BF" #02
+
+set notification-error-bg "#E06C75" #08
+set notification-error-fg "#12151d" #00
+
+set notification-warning-bg "#D19A66" #08
+set notification-warning-fg "#12151d" #00
+
+set highlight-color "#98C379" #0A
+set highlight-active-color "#ABB2BF" #0D
+
+set completion-highlight-fg "#12151d" #02
+set completion-highlight-bg "#C678DD" #0C
+
+set completion-bg "#1e222a" #02
+set completion-fg "#ABB2BF" #0C
+
+set notification-bg "#1e222a" #0B
+set notification-fg "#12151d" #00
+
+set recolor "true"
+set recolor-lightcolor "#12151d" #00
+set recolor-darkcolor "#ABB2BF" #06
+set recolor-reverse-video "false"
+set recolor-keephue "true"
+
 set render-loading "false"
 set scroll-step 50
 unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
-set recolor "true"
-set recolor-keephue "true"
 
-# NORD THEME
-# ----------
-set default-bg              "#2e3440" # nord0
-set default-fg              "#d8dee9" # nord4
-set statusbar-bg            "#2e3440" # nord0
-set statusbar-fg            "#d8dee9" # nord4
-set inputbar-bg             "#2e3440" # nord0
-set inputbar-fg             "#a3be8c" # nord14
-set completion-bg           "#2e3440" # nord0
-set completion-fg           "#d8dee9" # nord4
-set completion-group-bg     "#2e3440" # nord0
-set completion-group-fg     "#d8dee9" # nord4
-set completion-highlight-bg "#434c5e" # nord2
-set completion-highlight-fg "#d8dee9" # nord4
-set notification-bg         "#3b4252" # nord2
-set notification-fg         "#eceff4" # nord6
-set notification-error-bg   "#bf616a" # nord11
-set notification-error-fg   "#eceff4" # nord6
-set notification-warning-bg "#ebcb8b" # nord13
-set notification-warning-fg "#2e3440" # nord0
-set highlight-color         "#5e81ac" # nord10
-set highlight-active-color  "#88c0d0" # nord8
-set index-bg                "#2e3440" # nord0
-set index-fg                "#d8dee9" # nord4
-set index-active-bg         "#434c5e" # nord2
-set index-active-fg         "#d8dee9" # nord4
-set recolor-darkcolor       "#d8dee9" # nord4
-set recolor-lightcolor      "#2e3440" # nord0
-set render-loading-bg       "#2e3440" # nord0
-set render-loading-fg       "#d8dee9" # nord4

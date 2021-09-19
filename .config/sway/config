@@ -18,12 +18,15 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show drun -G -I -m
+set $menu rofi -show drun -show-icons -icon-theme "Papirus-Dark"
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/steve/Képek/Háttérképek/neon_mod.jpg fill
+exec /home/steve/Projektek/XKCD/main.sh
+output * bg /home/steve/Projektek/XKCD/result.png fill
+# output * bg /home/steve/Képek/Háttérképek/onedarker.png fill
+
 #
 # Example configuration:
 #
@@ -227,17 +230,17 @@ bindsym $mod+r mode "resize"
 include /etc/sway/config.d/*
 
 # Window Appearance
-default_border pixel 3
-for_window [class=".*"] border pixel 3
-gaps inner 16
-gaps outer 32
+default_border pixel 0
+for_window [class=".*"] border pixel 0
+gaps inner 32
+gaps outer 8
 
 # Some useful shortcuts
 bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+s exec freezer
 bindsym $mod+Shift+d exec discord
 bindsym $mod+Shift+g exec gimp
-bindsym $mod+x exec /home/steve/.config/sway/wofi-power.sh
+bindsym $mod+x exec /home/steve/.config/sway/rofi-power.sh
 
 # Assign some windows to workspaces
 assign [app_id="firefox"] 1
@@ -255,22 +258,28 @@ assign [class="Steam"] 7
 bindsym $mod+l exec bash /home/steve/.config/sway/lock.sh
 
 # Media controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioStop exec playerctl stop
 bindsym XF86Search exec wofi --show drun -G -I -m -d
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
+bindsym Print exec /home/steve/.config/sway/screenshot.sh
+bindsym Shift+Print exec /home/steve/.config/sway/screenshot_slurp.sh
 # Run Waybar on start
 exec waybar
 
 # Run playerctld on start
 exec playerctld
+
+# Run dunst on start
+exec dunst
 
 # Sway fading script
 exec python3 /home/steve/.config/sway/swayfader.py
@@ -287,3 +296,9 @@ bindsym $mod+Control+Shift+Down move workspace to output down
 bindsym $mod+Control+Shift+Up move workspace to output up
 
 output eDP-1 mode 1920x1080@75Hz
+
+border_images.focused /home/steve/.config/sway/borders/dropShadowDarkOffset.png
+border_images.focused_inactive /home/steve/.config/sway/borders/dropShadowDarkOffset.png
+border_images.unfocused /home/steve/.config/sway/borders/dropShadowDarkOffset.png
+border_images.urgent /home/steve/.config/sway/borders/dropShadowDarkOffset.png
+
