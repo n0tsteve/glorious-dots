@@ -4,6 +4,9 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+# Set sway font
+font pango:Iosevka Nerd Font 10
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -23,9 +26,9 @@ set $menu rofi -show drun -show-icons -icon-theme "Papirus-Dark"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-exec /home/steve/Projektek/XKCD/main.sh
+# exec /home/steve/Projektek/XKCD/main.sh
 output * bg /home/steve/Projektek/XKCD/result.png fill
-# output * bg /home/steve/Képek/Háttérképek/onedarker.png fill
+# output * bg /home/steve/Képek/Háttérképek/comfy.png fill
 
 #
 # Example configuration:
@@ -233,7 +236,7 @@ include /etc/sway/config.d/*
 default_border pixel 0
 for_window [class=".*"] border pixel 0
 gaps inner 32
-gaps outer 8
+gaps outer 10
 
 # Some useful shortcuts
 bindsym $mod+Shift+w exec firefox
@@ -267,8 +270,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioStop exec playerctl stop
 bindsym XF86Search exec wofi --show drun -G -I -m -d
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec light -A 1
+bindsym XF86MonBrightnessDown exec light -U 1
 
 bindsym Print exec /home/steve/.config/sway/screenshot.sh
 bindsym Shift+Print exec /home/steve/.config/sway/screenshot_slurp.sh
@@ -282,13 +285,13 @@ exec playerctld
 exec dunst
 
 # Sway fading script
-exec python3 /home/steve/.config/sway/swayfader.py
+#exec python3 /home/steve/.config/sway/swayfader.py
 
 # Defining colors         border     bg         text       indicator  child_border
-client.focused        	 	#61afef    #61afef    #282c34    #c678dd    #61afef
-client.unfocused        	#545862    #545862    #282c34	 #545862    #545862
-client.focused_inactive 	#545862    #545862    #282c34    #545862    #545862
-client.urgent	          	#e06c75    #e06c75    #282c34    #e06c75    #e06c75
+client.focused        	 	#12151d    #12151d    #abb2bf    #c678dd    #12151d
+client.unfocused        	#1e222a    #1e222a    #abb2bf	 #282c34    #282c34
+client.focused_inactive 	#1e222a    #1e222a    #abb2bf    #282c34    #282c34
+client.urgent	          	#e06c75    #1e222a    #abb2bf    #e06c75    #e06c75
 
 bindsym $mod+Control+Shift+Right move workspace to output right
 bindsym $mod+Control+Shift+Left move workspace to output left

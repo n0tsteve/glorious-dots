@@ -1,6 +1,6 @@
 {
-    "height": 30, // Waybar height (to be removed for auto height)
-    "modules-left": ["sway/workspaces", "sway/mode", "cpu", "memory", "temperature", "custom/phone-battery"],
+    "height": 34, // Waybar height (to be removed for auto height)
+    "modules-left": ["sway/workspaces", "sway/mode", "cpu", "memory", "temperature", "custom/fans"],
     "modules-center": ["custom/media", "clock"],
     "modules-right": ["idle_inhibitor", "keyboard-state", "sway/language", "pulseaudio", "backlight", "battery", "network", "tray"],
 
@@ -25,17 +25,11 @@
              "default": " "
          }
      },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": " ",
-            "unlocked": " "
-        }
-    },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/language": {
+        "format": "{long} ⠀⠀"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -62,7 +56,7 @@
     "temperature": {
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": [" ", " ", " "]
     },
     "backlight": {
         "format": "{percent}% {icon}",
@@ -123,11 +117,11 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
         "on-click": "playerctl play-pause",
     },
-    "custom/phone-battery": {
+    "custom/fans": {
         "format": "{}",
+        "exec": "$HOME/.config/waybar/fans.sh",
         "escape": true,
-        "exec": "$HOME/.config/waybar/battery.sh",
-        "restart-interval": "60"
+        "restart-interval": 10,
     }
 }
 

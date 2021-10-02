@@ -5,7 +5,9 @@
 }
 
 window#waybar {
-  background-color: rgba(18, 21, 29, 0.98);
+  /* background-color: rgba(18, 21, 29, 0.98); */
+  background-color: #12151d;
+  border-bottom: 3px solid #1e222a;
   color: #abb2bf;
   transition-property: background-color;
   transition-duration: .5s;
@@ -20,8 +22,8 @@ window#waybar.hidden {
 #cpu,
 #memory,
 #temperature,
-#custom-phone-battery,
 #custom-media,
+#custom-fans,
 #clock,
 #idle_inhibitor,
 #language,
@@ -32,7 +34,7 @@ window#waybar.hidden {
 #tray {
   background-color: #1e222a;
   padding: 0 10px;
-  margin: 2px 4px 2px 4px;
+  margin: 2px 4px 5px 4px;
   border: 3px solid rgba(0, 0, 0, 0);
   border-radius: 90px;
   background-clip: padding-box;
@@ -72,13 +74,14 @@ window#waybar.hidden {
   background-color: #e06c75;
   color: #1e222a;
 }
-#custom-phone-battery {
-  color: #98c379;
-}
 
 #custom-media {
   background-color: #98c379;
   color: #1e222a;
+}
+
+#custom-fans {
+  color: #98c379;
 }
 
 #clock {

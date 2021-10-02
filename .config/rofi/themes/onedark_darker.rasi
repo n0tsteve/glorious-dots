@@ -22,20 +22,25 @@
 window {
   transparency: "real";
   fullscreen: true;
-  background-color: rgba(18, 21, 29, 0.98);
+  background-color: rgba(18, 21, 29, 1);
 }
 
 mainbox {
-  padding: 30% 30%;
+  padding: 15% 15%;
+  children: [ inputbar, listview];
 }
 
 inputbar {
   margin: 0px 0px 20px 0px;
+  padding: 0.75%;
+  background-color: #1e222a;
+  border-radius: 4px;
   children: [prompt, textbox-prompt-colon, entry, case-indicator];
 }
 
 prompt {
   text-color: @blue;
+  background-color: #1e222a;
 }
 
 textbox-prompt-colon {
@@ -45,6 +50,7 @@ textbox-prompt-colon {
 }
 
 entry {
+  background-color: #1e222a;
   margin: 0px 10px;
 }
 
@@ -52,13 +58,19 @@ listview {
   spacing: 5px;
   dynamic: true;
   scrollbar: false;
+  layout: vertical;
+  columns: 7;
+  lines: 4;
 }
 
 element {
+  orientation: vertical;
+  expand: true;
+  horizontal-align: true;
   padding: 5px;
   text-color: @text-alt;
   highlight: bold #98c379;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 element selected {
@@ -89,5 +101,12 @@ button selected {
 }
 
 element-icon {
-  size: 3ch;
+  size: 64px;
+  horizontal-align: 0.5;
+}
+
+element-text {
+    expand: true;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
 }
