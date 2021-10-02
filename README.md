@@ -1,5 +1,6 @@
-My dotfiles
+My personal dotfiles.
 
+- OS: Arch Linux
 - Sway
 - Alacritty
 - Rofi
