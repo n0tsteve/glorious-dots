@@ -6,5 +6,7 @@ My personal dotfiles.
 - Rofi
 - Neovim
 - Firefox
+- CAVA
+- Neofetch
 
 ![image](/screenshot.png)
