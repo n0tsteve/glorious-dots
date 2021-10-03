@@ -5,5 +5,6 @@ My personal dotfiles.
 - Alacritty
 - Rofi
 - Neovim
+- Firefox
 
 ![image](/screenshot.png)
