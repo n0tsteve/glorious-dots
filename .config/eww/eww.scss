@@ -1,0 +1,444 @@
+*{
+  all: unset;
+}
+window {
+  background-color: #12151D;
+  color: #ABB2BF;
+  font-family: Iosevka Nerd Font;
+  border: 5px solid #1E222A;
+  border-radius: 16px;
+}
+
+button {
+  all: unset;
+  // background-color: #12151D;
+  padding: 10px;
+}
+
+.musicart {
+  background-size: 260px;
+  min-height: 260px;
+  min-width: 260px;
+  margin: 20px;
+  border-radius: 10px;
+  // padding: 10px;
+}
+
+.musictitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.musicartist {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.musicbtn button {
+  font-size: 12px;
+}
+
+.musicbtn button:hover {
+  color: #E06C75;
+}
+
+.volume scale trough {
+	all: unset;
+	background-color: #1E222A;
+	border-radius: 50px;
+	min-height: 5px;
+  min-width: 240px;
+  margin-bottom: 20px;
+}
+
+.volume scale trough highlight {
+	all: unset;
+	background-color: #d19a66;
+	color: #000000;
+	border-radius: 10px;
+}
+
+.volume slider {
+  all: unset;
+  color: #d19a66;
+}
+
+.number_day {
+  padding-top: 10px;
+  font-size: 35px;
+  color: #E06C75;
+}
+
+.month {
+  font-weight: bold;
+  // color: #C678DD;
+}
+
+.weather-icon-side {
+  font-size: 45px;
+  font-family: Iosevka Nerd Font;
+  margin: 5px 30px 5px 30px;
+}
+.weather-stat-side {
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: #E06C75;
+}
+
+.temperature-side {
+  font-size: 16px;
+  font-weight: 900;
+  padding-top: 15px;
+  padding-left: 10px;
+  // color: #C678DD;
+}
+
+.musicart-side {
+  min-height: 70px;
+  min-width: 80px;
+  margin: 15px;
+  padding-left: 15px;
+  border-radius: 6px;
+}
+.musicinfo-side {
+  font-size: 15px;
+  margin-top: 25px;
+  margin-left: 5px;
+  font-weight: bold;
+  // margin: 20px;
+  border-radius: 10px;
+  // border: 1px solid white;
+  min-width: 40px;
+}
+.musicbtn-side {
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 5px;
+}
+.musicbtn-side button {
+  font-size: 16px;
+  padding-right: 30px;
+}
+
+.musicbtn-side button:hover {
+  color: #E06C75;
+}
+.pause-play-side {
+  color: #E06C75;
+}
+.pause-play-side:hover {
+  color: #d19a66;
+}
+
+.time-side {
+  margin: 20px 65px 0px 65px;
+  font-size: 60px;
+}
+.minute-side {
+  color: #E06C75;
+}
+.day-side {
+  font-size: 16px;
+  font-weight: bold;
+  color: #98C379;
+}
+
+
+
+
+.sliders-side slider {
+  all: unset;
+  color: #d19a66;
+}
+.slider-vol-side {
+  margin-top: 10px;
+}
+.slider-vol-side scale trough highlight {
+	all: unset;
+	background-color: #C678DD;
+	color: #000000;
+	border-radius: 10px;
+}
+.slider-bright-side scale trough highlight {
+  all: unset;
+	background-color: #61AFEF;
+	color: #000000;
+	border-radius: 10px;
+}
+.slider-ram-side scale trough highlight {
+  all: unset;
+	background-color: #E06C75;;
+	color: #000000;
+	border-radius: 10px;
+}
+.slider-battery-side scale trough highlight {
+  all: unset;
+	background-color: #98C379;
+	color: #000000;
+	border-radius: 10px;
+}
+.slider-vol-side scale trough {
+	all: unset;
+	background-color: #1E222A;
+	border-radius: 50px;
+	min-height: 5px;
+  min-width: 170px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.slider-bright-side scale trough {
+	all: unset;
+	background-color: #1E222A;
+	border-radius: 50px;
+	min-height: 5px;
+  min-width: 170px;
+  margin-top: 10px;
+  margin-left: 16px;
+}
+.slider-ram-side scale trough {
+	all: unset;
+	background-color: #1E222A;
+	border-radius: 50px;
+	min-height: 5px;
+  min-width: 170px;
+  margin-top: 10px;
+  margin-left: 17px;
+}
+.slider-battery-side scale trough {
+	all: unset;
+	background-color: #1E222A;
+	border-radius: 50px;
+	min-height: 5px;
+  min-width: 170px;
+  margin-top: 10px;
+  margin-left: 13px;
+}
+
+.label-battery-side, .label-bright-side, .label-ram-side, .label-vol-side{
+  margin-top: 10px;
+  font-family: Iosevka Nerd Font;
+  margin-left: 35px;
+  font-size: 25px;
+}
+.label-bright-side {
+  color: #61AFEF;
+}
+.label-ram-side {
+  font-size: 30px;
+  color: #E06C75;
+}
+.label-battery-side {
+  font-size: 18px;
+  color: #98C379;
+}
+.label-vol-side {
+  color: #C678DD;
+}
+
+.search-side {
+  border-radius: 12px;
+  background-color: #1E222A;
+  margin: 20px 30px 20px 30px;
+}
+.search-side:hover {
+  color: #E06C75;
+}
+.sysbtn button {
+  font-size: 30px;
+}
+.shutdown-side ~ button:hover {
+  color: #E06C75;
+}
+.shutdown-side{
+  color: #E06C75;
+}
+.shutdown-side:hover{
+  color: #d19a66;
+}
+.reboot-side{
+  color: #61AFEF;
+}
+.lock-side{
+  color: #d19a66;
+}
+.suspend-side{
+  color: #C678DD;
+}
+.logout-side{
+  color: #98C379;
+}
+
+
+// .calendar {
+//   margin: 20px;
+//   font-size: 16px;
+// }
+.calendar_title {
+  margin: 20px 20px 0px 20px;
+  font-size: 16px;
+}
+
+.search-full {
+  font-size: 50px;
+  margin-right: 5px;
+}
+.search-full:hover {
+  color: #E06C75;
+}
+.power-full {
+  font-size: 60px;
+  color: #E06C75;
+}
+.power-full:hover {
+  color: #d19a66;
+}
+.reboot-full {
+  font-size: 60px;
+  color: #61AFEF
+}
+.reboot-full:hover {
+  color: #E06C75
+}
+.lock-full {
+  font-size: 60px;
+  color: #d19a66
+}
+.lock-full:hover {
+  color: #E06C75
+}
+.suspend-full {
+  font-size: 60px;
+  color: #C678DD
+}
+.suspend-full:hover {
+  color: #E06C75
+}
+.logout-full {
+  font-size: 60px;
+  color: #98C379
+}
+.logout-full:hover {
+  color: #E06C75
+}
+
+.pfp {
+  background-repeat: no-repeat;
+  background-size: 200px;
+  min-height: 200px;
+  min-width: 200px;
+  margin: 80px 20px 0px 65px;
+  border-radius: 500px;
+}
+.pfptxt {
+  margin-top: 100px;
+  color: #E06C75;
+  font-size: 36px;
+}
+.subpfptxt {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.weather-icon {
+  font-size: 80px;
+  margin: 40px 0px 0px 60px;
+  font-family: Iosevka Nerd Font;
+}
+.weather-stat {
+  font-size: 30px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-weight: bold;
+  color: #E06C75;
+}
+
+.temperature {
+  font-size: 48px;
+  padding-top: 50px;
+  padding-left: 20px;
+  font-weight: 900;
+}
+.weather-quote {
+  margin: 25px 10px 40px 10px;
+  font-size: 20px;
+}
+.weather-quote-head, .weather-quote-tail {
+  font-size: 18px;
+  // font-weight: bold;
+  // color: #98C379
+}
+
+.l1, .l2, .l3, .l4, .l5, .l6 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.home-dir {
+  margin: 10px;
+}
+.home-dir button:hover {
+  color: #d19a66;
+}
+.l1 {
+ color: #61AFEF;
+}
+.l2 {
+//  color: #98C379;
+}
+.l3 {
+ color: #C678DD;
+}
+.l4 {
+ color: #E06C75;
+}
+.l5 {
+  // color: #98C379;
+}
+.l6 {
+color: #61AFEF;
+}
+
+.quote-main {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  // margin-bottom: 20px;
+  margin-left: 20px;
+  color: #A5b3c0;
+}
+.quote-author {
+  font-size: 18px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  color: #61AFEF;
+}
+.quote-tail {
+  font-size: 18px;
+  font-weight: bold;
+  // margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  color: #A5b3c0;
+}
+
+.screenshot-icon {
+  color: #d19a66;
+  font-size: 60px;
+  margin-right: 5px;
+  font-family: Iosevka Nerd Font;
+}
+
+.vpn-icon {
+  font-size: 60px;
+  margin-right: 5px;
+}
+.incognito-icon {
+  font-size: 60px;
+  margin-right: 10px;
+  color: #C678DD;
+}
+.quote-box {
+  // margin: 5px;
+}

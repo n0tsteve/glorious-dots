@@ -1,0 +1,25 @@
+#!/bin/bash
+
+## Files and cmd
+FILE="$HOME/.cache/eww_launch.xyz"
+
+## Run eww daemon if not running already
+if [[ ! `pidof eww` ]]; then
+	eww daemon
+	sleep 1
+fi
+
+## Open widgets 
+run_eww() {
+  eww open-many weather_side time_side smol_calendar player_side sys_side sliders_side
+}
+
+## Launch or close widgets accordingly
+if [[ ! -f "$FILE" ]]; then
+	touch "$FILE"
+	run_eww
+else
+	eww close-all
+	rm "$FILE"
+fi
+

@@ -1,8 +1,8 @@
 {
-    "height": 34, // Waybar height (to be removed for auto height)
-    "modules-left": ["sway/workspaces", "sway/mode", "cpu", "memory", "temperature", "custom/fans"],
-    "modules-center": ["custom/media", "clock"],
-    "modules-right": ["idle_inhibitor", "keyboard-state", "sway/language", "pulseaudio", "backlight", "battery", "network", "tray"],
+    "height": 37, // Waybar height (to be removed for auto height)
+    "modules-left": ["sway/workspaces", "custom/media"],
+    "modules-center": ["clock"],
+    "modules-right": ["idle_inhibitor", "sway/language", "pulseaudio", "backlight", "battery", "network", "tray"],
 
     // Modules configuration
      "sway/workspaces": {
@@ -29,7 +29,7 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "sway/language": {
-        "format": "{long} ⠀⠀"
+        "format": "{short} ⠀⠀"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -59,7 +59,7 @@
         "format-icons": [" ", " ", " "]
     },
     "backlight": {
-        "format": "{percent}% {icon}",
+        "format": "{icon} {percent}%",
         "format-icons": [" ", " "],
         "on-scroll-up": "light -A 1",
         "on-scroll-down": "light -U 1"
@@ -69,28 +69,27 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}%  ",
-        "format-plugged": "{capacity}%  ",
+        "format": "{icon} {capacity}%",
+        "tooltip-format": "{timeTo}, {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " ",
         "format-alt": "{time} {icon}",
-        "format-icons": [" ", "", " ", " ", " "]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
+        "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-wifi": "直 ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr}  ",
         "format-linked": "{ifname} (No IP)  ",
-        "format-disconnected": "Disconnected ⚠ ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-disconnected": "睊 ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{essid} {signalStrength}%"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "   {format_source}",
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "   {volume}% {format_source}",
         "format-muted": "  {format_source}",
-        "format-source": "{volume}%  ",
+        "format-source": " ",
         "format-source-muted": " ",
         "format-icons": {
             "headphone": " ",
@@ -101,6 +100,7 @@
             "car": " ",
             "default": [" ", " ", " "]
         },
+        "tooltip-format": "{desc}, {volume}%",
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
         "on-click-middle": "pavucontrol"

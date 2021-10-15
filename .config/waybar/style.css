@@ -7,6 +7,7 @@
 window#waybar {
   /* background-color: rgba(18, 21, 29, 0.98); */
   background-color: #12151d;
+  /* background-color: rgba(0, 0, 0, 0); */
   border-bottom: 3px solid #1e222a;
   color: #abb2bf;
   transition-property: background-color;
@@ -76,7 +77,7 @@ window#waybar.hidden {
 }
 
 #custom-media {
-  background-color: #98c379;
+  background-color: #c678dd;
   color: #1e222a;
 }
 
@@ -125,8 +126,8 @@ window#waybar.hidden {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #1e222a;
+        color: #e06c75;
     }
 }
 

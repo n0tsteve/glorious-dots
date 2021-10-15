@@ -1,0 +1,112 @@
+* {
+  black:      #000000;
+  red:        #e06c75;
+  green:      #98c379;
+  yellow:     #d19a66;
+  blue:       #61afef;
+  mangenta:   #c678dd;
+  cyan:       #56b6c2;
+  emphasis:   #1e222a;
+  text:       #abb2bf;
+  text-alt:   #abb2bf;
+  fg:         #abb2bf;
+  bg:         #1e222a;
+  
+  spacing: 0;
+  background-color: transparent;
+
+  font: "Iosevka Nerd Font 14";
+  text-color: @blue;
+}
+
+window {
+  transparency: "real";
+  fullscreen: false;
+  width: 30%;
+  height: 500px;
+  border: 3;
+  border-color: #1e222a;
+  background-color: rgba(18, 21, 29, 1);
+}
+
+mainbox {
+  padding: 1% 1%;
+  children: [ inputbar, listview];
+}
+
+inputbar {
+  margin: 0px 0px 20px 0px;
+  padding: 0.75%;
+  background-color: #1e222a;
+  border-radius: 4px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+  text-color: @blue;
+  background-color: #1e222a;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  background-color: #1e222a;
+  margin: 0px 10px;
+}
+
+listview {
+  lines: 10;
+  spacing: 5px;
+  dynamic: true;
+  scrollbar: false;
+}
+
+element {
+  expand: true;
+  padding: 5px;
+  text-color: @text-alt;
+  highlight: bold #98c379;
+  border-radius: 4px;
+}
+
+element selected {
+  background-color: @emphasis;
+  text-color: @text;
+}
+
+element urgent, element selected urgent {
+  text-color: @red;
+}
+
+element active, element selected active {
+  text-color: @purple;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+  border: 1px;
+  border-color: @cyan;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+}
+
+element-icon {
+  size: 64px;
+  horizontal-align: 0.5;
+}
+
+element-text {
+    expand: true;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
