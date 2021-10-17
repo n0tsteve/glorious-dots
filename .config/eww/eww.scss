@@ -99,9 +99,7 @@ button {
 .musicart-side {
   min-height: 70px;
   min-width: 80px;
-  margin: 15px;
   padding-left: 15px;
-  border-radius: 6px;
 }
 .musicinfo-side {
   font-size: 15px;
@@ -174,7 +172,7 @@ button {
 	color: #000000;
 	border-radius: 10px;
 }
-.slider-battery-side scale trough highlight {
+.slider-temp-side scale trough highlight {
   all: unset;
 	background-color: #98C379;
 	color: #000000;
@@ -207,7 +205,7 @@ button {
   margin-top: 10px;
   margin-left: 17px;
 }
-.slider-battery-side scale trough {
+.slider-temp-side scale trough {
 	all: unset;
 	background-color: #1E222A;
 	border-radius: 50px;
@@ -217,7 +215,7 @@ button {
   margin-left: 13px;
 }
 
-.label-battery-side, .label-bright-side, .label-ram-side, .label-vol-side{
+.label-temp-side, .label-bright-side, .label-ram-side, .label-vol-side{
   margin-top: 10px;
   font-family: Iosevka Nerd Font;
   margin-left: 35px;
@@ -230,8 +228,8 @@ button {
   font-size: 30px;
   color: #E06C75;
 }
-.label-battery-side {
-  font-size: 18px;
+.label-temp-side {
+  font-size: 25px;
   color: #98C379;
 }
 .label-vol-side {

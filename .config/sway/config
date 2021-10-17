@@ -27,8 +27,8 @@ set $menu rofi -show drun -show-icons -icon-theme "Papirus-Dark"
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # exec /home/steve/Projektek/XKCD/main.sh
-# output * bg /home/steve/Projektek/XKCD/result.png fill
-output * bg /home/steve/Képek/Háttérképek/scenery.jpg fill
+output * bg /home/steve/Projektek/XKCD/result.png fill
+# output * bg /home/steve/Képek/Háttérképek/scenery.jpg fill
 
 #
 # Example configuration:
@@ -240,7 +240,7 @@ gaps outer 10
 
 # Some useful shortcuts
 bindsym $mod+Shift+w exec firefox
-bindsym $mod+Shift+s exec freezer
+bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+d exec discord
 bindsym $mod+Shift+g exec gimp
 bindsym $mod+x exec /home/steve/.config/sway/rofi-power.sh
@@ -249,7 +249,7 @@ bindsym $mod+x exec /home/steve/.config/sway/rofi-power.sh
 assign [app_id="firefox"] 1
 assign [class="discord"] 3
 for_window [class="discord"] move to workspace 3
-assign [class="freezer"]  4
+for_window [class="Spotify"] move to workspace 4
 assign [app_id="nemo"] 5
 for_window [title="GIMP Startup"] move workspace 6
 for_window [class="Gimp"] move workspace 6

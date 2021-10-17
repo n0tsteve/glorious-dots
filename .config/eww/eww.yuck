@@ -24,7 +24,7 @@
     (defwidget player_side [] 
       (box :orientation "h" :space-evenly "false" 
         (box :class "musicart-side"
-          (image :path "/tmp/sway/spotify/cover.png" :width "80" :height "80")
+          (image :class "musicart-side-img" :path "/tmp/sway/spotify/cover.png" :width "80" :height "80")
         )
         (box :class "musicstuff-side" :orientation "v" :space-evenly "false" 
           (box :class "musicinfo-side" music3)
@@ -49,9 +49,9 @@
         (box :orientation "h" :class "slider-ram-side" :space-evenly "false" 
           (box :class "label-ram-side" "")
           (scale :min 0 :active "false" :max 101 :value ram-used))
-        (box :orientation "h" :class "slider-battery-side" :space-evenly "false" 
-          (box :class "label-battery-side" bat-icon)
-          (scale :min 0 :active "false" :max 101 :value battery-remaining))))
+        (box :orientation "h" :class "slider-temp-side" :space-evenly "false" 
+          (box :class "label-temp-side" " ")
+          (scale :min 0 :active "false" :max 101 :value coretemp))))
     (defwidget sys_side [] 
       (box :orientation "v" :space-evenly "false" 
         (button :class "search-side" :onclick "~/bin/launcher.sh" "  Search...")
@@ -162,9 +162,8 @@
     ;; Big brain RAM vars
     (defpoll ram-used :interval "1s"  "~/.config/eww/scripts/getram")
 
-    ;; Battery charge vars
-    (defpoll battery-remaining :interval "2m"  "cat /sys/class/power_supply/BAT0/capacity")
-    (defpoll bat-icon :interval "2m"  "scripts/battery.sh")
+    ;; Cpu temp vars
+    (defpoll coretemp :interval "2m"  "scripts/coretemp.sh")
 
     ;;  Home-dir stuff 
     (defpoll l1-processed :interval "20h"  "~/.config/eww/scripts/home-dir/l1-processed")
